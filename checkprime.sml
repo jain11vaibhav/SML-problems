@@ -7,6 +7,8 @@ fun checkprime(x) = let
 		then true
 		else 
 		prime(x,y-1)
-	in	
-		prime(x,x-1)
+	in	if(x mod 2=0)
+		then prime(x,x div 2)
+		else
+		prime(x,(x+1) div 2)
 	end
